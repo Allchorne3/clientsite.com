@@ -7,10 +7,12 @@ module.exports = function(eleventyConfig){
     })
   
   return {
+    markdownTemplateEngine: "hbs",
+    templateFormat: ["html", "hbs", "md"],
     dir: {
       output: "public",
       input: "src", 
-      includes: "includes"
+      // includes: "includes"
     }
   }
 }
