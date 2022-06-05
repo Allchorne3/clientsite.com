@@ -1,0 +1,22 @@
+{
+  "name": "Eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:11ty": "eleventy --serve",
+    "build:11ty": "eleventy",
+    "dev:assets": "mix watch",
+    "build:assets": "mix --production",
+    "dev": "concurrently --kill-others \"npm run dev:assets\" \"npm run dev:11ty\"",
+    "production": "npm run build:11ty && npm run build:assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "concurrently": "^7.2.1",
+    "laravel-mix": "^6.0.48"
+  }
+}
